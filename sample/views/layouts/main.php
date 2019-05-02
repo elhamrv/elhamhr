@@ -38,8 +38,20 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+            ['label' => 'Mal', 'url' => ['/site/mal']],
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Shop', 'url' => ['/site/shop']],
+            ['label' => 'Test', 'url' => ['/site/test'],'items'=>[
+                ['label' => 'Test', 'url' => ['/site/test']],
+                ['label' => 'Input', 'url' => ['/site/input']],
+                ['label' => 'Ajaxview', 'url' => ['/site/ajaxview']],
+            ]],
+            ['label' => 'Shop', 'url' => ['/site/shop'], 'items'=>[
+                ['label' => 'New view', 'url' => ['/site/newview']],
+                ['label' => 'Testpost', 'url' => ['/site/testpost']],
+                ['label' => 'lastview', 'url' => ['/site/lastview']],
+            ]],
+            ['label' => 'Employee', 'url' => ['/employee/index']],
+            ['label' => 'Unit', 'url' => ['/unit/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
